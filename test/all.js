@@ -13,9 +13,11 @@ const router = loader.getRouter({
 })
 
 /**
- * NOTE: Tests fail due to server "listening" before routes fully set up.
- * using node 12.15.0
- * logging below to demonstrate 
+ * FIXME: Tests fail due to server "listening" before routes fully set up.
+ * This also occurred when using glob.sync which makes me suspect that
+ * express binds the routes asynchronously. We could wrap it all in a promise
+ * But that would necessitate a change to how we're loading the module.
+ * Console logging below to demonstrate 
  */
 
 app.use('/prefix', router)
