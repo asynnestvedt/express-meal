@@ -1,7 +1,7 @@
 # express-meal
 auto-load express routes based on filesystem naming
 
-```
+```javascript
 const loader = require('express-meal')
 
 /** ... glob load all your routes **/
