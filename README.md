@@ -2,7 +2,7 @@
 auto-load express routes based on filesystem naming
 
 ```
-const loader = require('../../express-meal')
+const loader = require('express-meal')
 
 /** ... glob load all your routes **/
 const router = loader.getRouter({
